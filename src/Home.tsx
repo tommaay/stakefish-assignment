@@ -1,4 +1,4 @@
-function App() {
+function Home() {
   return (
     <main>
       <h1>Top 10 trusted exhanges</h1>
@@ -6,4 +6,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
