@@ -1,22 +1,25 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-
-  background-color: #1b1d21;
-  color: #e6e6e6;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
   /* 640px */
   --sm: 40rem;
   /* 768px */
   --md: 48rem;
   /* 1024px */
   --lg: 64rem;
+
+  --bg: #1b1d21;
+  --white: #e6e6e6;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  background-color: var(--bg);
+  color: var(--white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 .layout {
@@ -28,17 +31,17 @@
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
   text-align: center;
 }
-
-@media (max-width: 40rem) {
+@media (min-width: 40rem) {
   .page-title {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 2;
   }
 }
 
@@ -53,7 +56,43 @@ a {
   }
 }
 
+.v-divider {
+  border-right: 1px solid white;
+  height: 2.5rem;
+  margin: 0 0.5rem;
+}
+
+.card {
+  border: 0.5px solid var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  min-height: 160px;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
 /* Utility classes */
 .text-center {
   text-align: center;
+}
+
+.flex-items-center {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mb-n {
+  margin-bottom: 0;
 }

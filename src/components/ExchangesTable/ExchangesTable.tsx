@@ -2,7 +2,6 @@ import { FC, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Exchange } from "@/types";
 import { COIN_GECKO_URL } from "@/constants";
-import "./exchanges-table.css";
 
 const ExchangesTable: FC = () => {
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
@@ -40,7 +39,7 @@ const ExchangesTable: FC = () => {
             <tr key={exchange.id}>
               <td className="td">{exchange.trust_score_rank}</td>
               <td className="td">
-                <div className="icon-name-container">
+                <div className="flex-items-center">
                   <img
                     src={exchange.image}
                     alt={exchange.name}
