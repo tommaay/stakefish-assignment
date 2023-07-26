@@ -32,7 +32,12 @@
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  max-width: var(--sm);
+  max-width: 100%;
+}
+@media (min-width: 80rem) {
+  .layout {
+    max-width: var(--xl);
+  }
 }
 
 .page-title {
