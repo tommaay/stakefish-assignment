@@ -1,0 +1,227 @@
+import { rest } from "msw";
+import { COIN_GECKO_URL } from "@/constants";
+
+export const handlers = [
+  rest.get(`${COIN_GECKO_URL}/exchanges/?per_page=10`, (_, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          id: "1",
+          name: "Mock Exchange 1",
+          year_established: 2010,
+          country: "United States",
+          description: "Mock exchange 1 description",
+          url: "https://mock-exchange-1.com",
+          image: "https://mock-exchange-1.com/image.png",
+          has_trading_incentive: true,
+          trust_score: 4.5,
+          trust_score_rank: 10,
+          trade_volume_24h_btc: 1000,
+          trade_volume_24h_btc_normalized: 250,
+        },
+        {
+          id: "2",
+          name: "Mock Exchange 2",
+          year_established: 2015,
+          country: "United Kingdom",
+          description: "Mock exchange 2 description",
+          url: "https://mock-exchange-2.com",
+          image: "https://mock-exchange-2.com/image.png",
+          has_trading_incentive: false,
+          trust_score: 3.8,
+          trust_score_rank: 15,
+          trade_volume_24h_btc: 500,
+          trade_volume_24h_btc_normalized: 120,
+        },
+        {
+          id: "3",
+          name: "Mock Exchange 3",
+          year_established: 2008,
+          country: "Singapore",
+          description: "Mock exchange 3 description",
+          url: "https://mock-exchange-3.com",
+          image: "https://mock-exchange-3.com/image.png",
+          has_trading_incentive: true,
+          trust_score: 4.2,
+          trust_score_rank: 8,
+          trade_volume_24h_btc: 800,
+          trade_volume_24h_btc_normalized: 180,
+        },
+      ]),
+    );
+  }),
+  rest.get(`${COIN_GECKO_URL}/exchanges/1`, (_, res, ctx) => {
+    return res(
+      ctx.json({
+        name: "Mock Exchange 1",
+        year_established: 2010,
+        country: "United States",
+        description: "Mock exchange 1 description",
+        url: "https://mock-exchange-1.com",
+        image: "https://mock-exchange-1.com/image.png",
+        facebook_url: "https://facebook.com/mock-exchange-1",
+        reddit_url: "https://reddit.com/mock-exchange-1",
+        telegram_url: "https://t.me/mock-exchange-1",
+        slack_url: "https://slack.com/mock-exchange-1",
+        other_url_1: "https://other-url-1.com",
+        other_url_2: "https://other-url-2.com",
+        twitter_handle: "mock-exchange-1",
+        has_trading_incentive: true,
+        centralized: true,
+        public_notice: "Mock exchange 1 public notice",
+        alert_notice: "Mock exchange 1 alert notice",
+        trust_score: 4.5,
+        trust_score_rank: 10,
+        trade_volume_24h_btc: 1000,
+        trade_volume_24h_btc_normalized: 250,
+        tickers: [
+          {
+            base: "BTC",
+            target: "USDT",
+            market: {
+              name: "Mock Exchange 1 Market",
+              identifier: "mock-exchange-1-market",
+              has_trading_incentive: true,
+            },
+            last: 1000,
+            volume: 1000,
+            converted_last: {
+              btc: 1,
+              eth: 10,
+              usd: 10000,
+            },
+            converted_volume: {
+              btc: 1,
+              eth: 10,
+              usd: 10000,
+            },
+            trust_score: "green",
+            bid_ask_spread_percentage: 0.1,
+          },
+          {
+            base: "ETH",
+            target: "USDT",
+            market: {
+              name: "Mock Exchange 1 Market",
+              identifier: "mock-exchange-1-market",
+              has_trading_incentive: true,
+            },
+            last: 100,
+            volume: 100,
+            converted_last: {
+              btc: 0.1,
+              eth: 1,
+              usd: 1000,
+            },
+            converted_volume: {
+              btc: 0.1,
+              eth: 1,
+              usd: 1000,
+            },
+            trust_score: "green",
+            bid_ask_spread_percentage: 0.1,
+          },
+        ],
+        status_updates: [
+          {
+            description: "Mock exchange 1 status update 1",
+            category: "general",
+            created_at: "2021-01-01T00:00:00.000Z",
+          },
+          {
+            description: "Mock exchange 1 status update 2",
+            category: "general",
+            created_at: "2021-01-02T00:00:00.000Z",
+          },
+        ],
+      }),
+    );
+  }),
+  rest.get(`${COIN_GECKO_URL}/exchanges/2`, (_, res, ctx) => {
+    return res(
+      ctx.json({
+        name: "Mock Exchange 2",
+        year_established: 2010,
+        country: "United States",
+        description: "Mock exchange 2 description",
+        url: "https://mock-exchange-2.com",
+        image: "https://mock-exchange-2.com/image.png",
+        facebook_url: "https://facebook.com/mock-exchange-2",
+        reddit_url: "https://reddit.com/mock-exchange-2",
+        telegram_url: "https://t.me/mock-exchange-2",
+        slack_url: "https://slack.com/mock-exchange-2",
+        other_url_1: "https://other-url-1.com",
+        other_url_2: "https://other-url-2.com",
+        twitter_handle: "mock-exchange-2",
+        has_trading_incentive: true,
+        centralized: true,
+        public_notice: "Mock exchange 2 public notice",
+        alert_notice: "Mock exchange 2 alert notice",
+        trust_score: 4.5,
+        trust_score_rank: 20,
+        trade_volume_24h_btc: 2000,
+        trade_volume_24h_btc_normalized: 250,
+        tickers: [
+          {
+            base: "BTC",
+            target: "USDT",
+            market: {
+              name: "Mock Exchange 2 Market",
+              identifier: "mock-exchange-2-market",
+              has_trading_incentive: true,
+            },
+            last: 2000,
+            volume: 2000,
+            converted_last: {
+              btc: 2,
+              eth: 20,
+              usd: 20000,
+            },
+            converted_volume: {
+              btc: 2,
+              eth: 20,
+              usd: 20000,
+            },
+            trust_score: "green",
+            bid_ask_spread_percentage: 0.2,
+          },
+          {
+            base: "ETH",
+            target: "USDT",
+            market: {
+              name: "Mock Exchange 2 Market",
+              identifier: "mock-exchange-2-market",
+              has_trading_incentive: true,
+            },
+            last: 200,
+            volume: 200,
+            converted_last: {
+              btc: 0.2,
+              eth: 2,
+              usd: 2000,
+            },
+            converted_volume: {
+              btc: 0.2,
+              eth: 2,
+              usd: 2000,
+            },
+            trust_score: "green",
+            bid_ask_spread_percentage: 0.2,
+          },
+        ],
+        status_updates: [
+          {
+            description: "Mock exchange 2 status update 2",
+            category: "general",
+            created_at: "2021-01-01T00:00:00.000Z",
+          },
+          {
+            description: "Mock exchange 2 status update 2",
+            category: "general",
+            created_at: "2021-01-02T00:00:00.000Z",
+          },
+        ],
+      }),
+    );
+  }),
+];

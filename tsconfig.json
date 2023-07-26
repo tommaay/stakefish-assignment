@@ -23,8 +23,11 @@
       "@/*": ["./src/*"],
       "components/*": ["./src/components/*"],
       "pages/*": ["./src/pages/*"],
-      "styles/*": ["./src/styles/*"]
-    }
+      "styles/*": ["./src/styles/*"],
+      "test/*": ["./src/test/*"],
+      "mocks/*": ["./src/test/mocks/*"]
+    },
+    "types": ["vitest/globals"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
