@@ -74,8 +74,8 @@ export const MOCK_EXCHANGE_DETAILS = {
         identifier: "mock-exchange-1-market",
         has_trading_incentive: true,
       },
-      last: 1000,
-      volume: 1000,
+      last: 1010,
+      volume: 1040,
       converted_last: {
         btc: 1,
         eth: 10,
@@ -97,8 +97,8 @@ export const MOCK_EXCHANGE_DETAILS = {
         identifier: "mock-exchange-1-market",
         has_trading_incentive: true,
       },
-      last: 100,
-      volume: 100,
+      last: 110,
+      volume: 101,
       converted_last: {
         btc: 0.12,
         eth: 1,
