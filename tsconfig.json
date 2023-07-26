@@ -25,7 +25,8 @@
       "pages/*": ["./src/pages/*"],
       "styles/*": ["./src/styles/*"],
       "test/*": ["./src/test/*"],
-      "mocks/*": ["./src/test/mocks/*"]
+      "mocks/*": ["./src/test/mocks/*"],
+      "utils/*": ["./src/utils/*"]
     },
     "types": ["vitest/globals"]
   },

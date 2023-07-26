@@ -2,6 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import ExchangesTable from "./ExchangesTable";
 import { MOCK_EXCHANGES_LIST } from "mocks/data";
+import { roundNumberAndCovertToLocale } from "utils/numbers";
 
 const exchange1 = MOCK_EXCHANGES_LIST[0];
 const exchange2 = MOCK_EXCHANGES_LIST[1];
@@ -35,9 +36,9 @@ describe("ExchangesTable", () => {
       const trustScore = screen.getByText(exchange1.trust_score);
       expect(trustScore).toBeVisible();
       const tradeVolume = screen.getByText(
-        `${Math.round(
+        `${roundNumberAndCovertToLocale(
           exchange1.trade_volume_24h_btc_normalized,
-        ).toLocaleString()} BTC`,
+        )} BTC`,
       );
       expect(tradeVolume).toBeVisible();
       const country = screen.getByText(exchange1.country);
@@ -55,9 +56,9 @@ describe("ExchangesTable", () => {
       const trustScore = screen.getByText(exchange2.trust_score);
       expect(trustScore).toBeVisible();
       const tradeVolume = screen.getByText(
-        `${Math.round(
+        `${roundNumberAndCovertToLocale(
           exchange2.trade_volume_24h_btc_normalized,
-        ).toLocaleString()} BTC`,
+        )} BTC`,
       );
       expect(tradeVolume).toBeVisible();
       const country = screen.getByText(exchange2.country);
@@ -75,9 +76,9 @@ describe("ExchangesTable", () => {
       const trustScore = screen.getByText(exchange3.trust_score);
       expect(trustScore).toBeVisible();
       const tradeVolume = screen.getByText(
-        `${Math.round(
+        `${roundNumberAndCovertToLocale(
           exchange3.trade_volume_24h_btc_normalized,
-        ).toLocaleString()} BTC`,
+        )} BTC`,
       );
       expect(tradeVolume).toBeVisible();
       const country = screen.getByText(exchange3.country);

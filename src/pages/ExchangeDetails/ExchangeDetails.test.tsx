@@ -2,6 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import ExchangeDetails from "./ExchangeDetails";
 import { MOCK_EXCHANGE_DETAILS } from "mocks/data";
+import { roundNumberAndCovertToLocale } from "utils/numbers";
 
 describe("ExchangeDetails", () => {
   const renderExchangeDetails = async () => {
@@ -38,9 +39,9 @@ describe("ExchangeDetails", () => {
       expect(screen.getByText("24 Trading Volume")).toBeVisible();
       expect(
         screen.getByText(
-          `${Math.round(
+          `${roundNumberAndCovertToLocale(
             MOCK_EXCHANGE_DETAILS.trade_volume_24h_btc,
-          ).toLocaleString()} BTC`,
+          )} BTC`,
         ),
       ).toBeVisible();
 
@@ -62,7 +63,7 @@ describe("ExchangeDetails", () => {
           screen.getByText(ticker.bid_ask_spread_percentage),
         ).toBeVisible();
         expect(
-          screen.getByText(Math.round(ticker.volume).toLocaleString()),
+          screen.getByText(roundNumberAndCovertToLocale(ticker.volume)),
         ).toBeVisible();
       });
     });

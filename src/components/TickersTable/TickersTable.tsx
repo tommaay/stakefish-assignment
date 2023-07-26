@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Ticker } from "@/types";
+import { roundNumberAndCovertToLocale } from "utils/numbers";
 
 interface TickersTableProps {
   tickers: Ticker[];
@@ -38,7 +39,7 @@ const TickersTable: FC<TickersTableProps> = ({ tickers }) => {
 
               <td className="td">{ticker.bid_ask_spread_percentage}</td>
               <td className="td">
-                {Math.round(ticker.volume).toLocaleString()}{" "}
+                {roundNumberAndCovertToLocale(ticker.volume)}{" "}
               </td>
             </tr>
           ))}

@@ -6,6 +6,7 @@ import SocialMediaCard from "components/SocialMediaCard";
 import TickersTable from "components/TickersTable";
 import { ExchangeDetails } from "@/types";
 import { COIN_GECKO_URL } from "@/constants";
+import { roundNumberAndCovertToLocale } from "utils/numbers";
 import "styles/exchange-details.css";
 
 const ExchangeDetails: FC = () => {
@@ -55,9 +56,9 @@ const ExchangeDetails: FC = () => {
         <DetailsCard label="Country" value={exchange.country} />
         <DetailsCard
           label="24 Trading Volume"
-          value={`${Math.round(
+          value={`${roundNumberAndCovertToLocale(
             exchange.trade_volume_24h_btc,
-          ).toLocaleString()} BTC`}
+          )} BTC`}
         />
         <SocialMediaCard
           facebook_url={exchange.facebook_url}

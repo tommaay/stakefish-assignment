@@ -2,6 +2,7 @@ import { FC, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Exchange } from "@/types";
 import { COIN_GECKO_URL } from "@/constants";
+import { roundNumberAndCovertToLocale } from "utils/numbers";
 
 const ExchangesTable: FC = () => {
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
@@ -54,9 +55,9 @@ const ExchangesTable: FC = () => {
               </td>
               <td className="td text-center">{exchange.trust_score}</td>
               <td className="td  text-center">
-                {Math.round(
+                {roundNumberAndCovertToLocale(
                   exchange.trade_volume_24h_btc_normalized,
-                ).toLocaleString()}{" "}
+                )}{" "}
                 BTC
               </td>
               <td className="td">{exchange.country}</td>

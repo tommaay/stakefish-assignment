@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import TickersTable from "./TickersTable";
 import { MOCK_EXCHANGE_DETAILS } from "mocks/data";
 import { Ticker } from "@/types";
+import { roundNumberAndCovertToLocale } from "utils/numbers";
 
 const mockTickers = MOCK_EXCHANGE_DETAILS.tickers as Ticker[];
 
@@ -33,7 +34,7 @@ describe("ExchangesTable", () => {
     expect(screen.getByText(ticker1.last)).toBeVisible();
     expect(screen.getByText(ticker1.bid_ask_spread_percentage)).toBeVisible();
     expect(
-      screen.getByText(Math.round(ticker1.volume).toLocaleString()),
+      screen.getByText(roundNumberAndCovertToLocale(ticker1.volume)),
     ).toBeVisible();
   });
 
