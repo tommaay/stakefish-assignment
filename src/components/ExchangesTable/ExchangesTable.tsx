@@ -29,7 +29,7 @@ const ExchangesTable: FC = () => {
             <th className="th">#</th>
             <th className="th">Name</th>
             <th className="th">Trust Score</th>
-            <th className="th">24h Volume (Normalized)</th>
+            <th className="th">24h Volume</th>
             <th className="th">Country</th>
             <th className="th">URL</th>
           </tr>

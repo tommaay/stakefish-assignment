@@ -22,7 +22,7 @@ describe("ExchangesTable", () => {
       expect(screen.getByText("#")).toBeVisible();
       expect(screen.getByText("Name")).toBeVisible();
       expect(screen.getByText("Trust Score")).toBeVisible();
-      expect(screen.getByText("24h Volume (Normalized)")).toBeVisible();
+      expect(screen.getByText("24h Volume")).toBeVisible();
       expect(screen.getByText("Country")).toBeVisible();
       expect(screen.getByText("URL")).toBeVisible();
     });
