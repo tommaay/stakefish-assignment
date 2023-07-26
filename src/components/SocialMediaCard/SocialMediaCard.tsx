@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-interface SocialMediaCardProps {
+export interface SocialMediaCardProps {
   facebook_url?: string;
   reddit_url?: string;
   telegram_url?: string;
