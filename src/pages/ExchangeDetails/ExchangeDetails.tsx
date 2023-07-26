@@ -8,7 +8,7 @@ import { ExchangeDetails } from "@/types";
 import { COIN_GECKO_URL } from "@/constants";
 import "styles/exchange-details.css";
 
-const ExhangeDetails: FC = () => {
+const ExchangeDetails: FC = () => {
   const [exchange, setExchange] = useState<ExchangeDetails | null>(null);
 
   const { exchangeId } = useParams();
@@ -73,4 +73,4 @@ const ExhangeDetails: FC = () => {
   );
 };
 
-export default ExhangeDetails;
+export default ExchangeDetails;

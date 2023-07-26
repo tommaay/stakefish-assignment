@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
-import ExhangeDetails from "pages/ExhangeDetails";
+import ExchangeDetails from "@/pages/ExchangeDetails/index.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -9,6 +9,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/:exchangeId",
-    element: <ExhangeDetails />,
+    element: <ExchangeDetails />,
   },
 ]);
