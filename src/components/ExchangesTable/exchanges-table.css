@@ -1,0 +1,48 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.table {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.th {
+  height: 3rem;
+  padding: 0 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.td {
+  padding: 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.icon-name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.name-link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}

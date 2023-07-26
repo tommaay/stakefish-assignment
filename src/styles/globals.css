@@ -1,0 +1,59 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  background-color: #1b1d21;
+  color: #e6e6e6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* 640px */
+  --sm: 40rem;
+  /* 768px */
+  --md: 48rem;
+  /* 1024px */
+  --lg: 64rem;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 40rem) {
+  .page-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+
+  transition: color 0.15s ease;
+  &:hover {
+    color: rgb(0, 119, 255);
+    text-decoration: underline;
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
