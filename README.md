@@ -7,3 +7,19 @@ This project uses the CoinGecko apis to get the top 10 trust exchanges and rende
 ## Deployed url
 
 https://stakefish-assignment-psi.vercel.app/
+
+## Local Development
+
+To set up the project for local development, follow these instructions:
+
+1. Install the depencies at the root level:
+
+   > npm i
+
+2. Start the local server:
+
+   > npm run dev
+
+3. To run the unit tests:
+
+   > npm test
