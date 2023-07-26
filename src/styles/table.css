@@ -1,9 +1,9 @@
 .table-container {
   width: 100%;
-  overflow-x: auto;
   margin-left: auto;
   margin-right: auto;
 
+  overflow-x: auto;
   /* Hide scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -19,9 +19,6 @@
   line-height: 1.25rem;
   margin-left: auto;
   margin-right: auto;
-  border: 0.5px solid var(--white);
-  padding: 1rem;
-  border-radius: 10px;
 }
 
 .th {
