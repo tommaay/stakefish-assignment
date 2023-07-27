@@ -36,4 +36,4 @@ To set up the project for local development, follow these instructions:
 
 ## Other notes
 
-There are some things that I didn't add due to not having enough time and prioritizing other important tasks. I didn't add any loading UX which is a must if this was a real production app. I would have liked to add some caching for the exchanges and details apis. For that I would not want to do it manually but I could if I had to. But the developer experience of using a library like Tanstack Query for React makes it so much easier. That is one project I would highly push to use on whatever team I'm on.
+There are some things that I didn't add due to not having enough time and prioritizing other important tasks. I didn't add any loading UX or error handling which is a must if this was a real production app. I would have liked to add some caching for the exchanges and details apis. For that I would not want to do it manually but I could if I had to. But the developer experience of using a library like Tanstack Query for React makes it so much easier. That is one project I would highly push to use on whatever team I'm on.
