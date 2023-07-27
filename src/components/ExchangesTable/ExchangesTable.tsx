@@ -36,14 +36,9 @@ const ExchangesTable: FC = () => {
         </thead>
 
         <tbody className="tbody">
-          {exchanges.map((exchange, index) => (
+          {exchanges.map((exchange) => (
             <tr key={exchange.id}>
-              <td
-                className="td"
-                data-testid={`trust-rank-data-${exchange.trust_score_rank}`}
-              >
-                {exchange.trust_score_rank}
-              </td>
+              <td className="td">{exchange.trust_score_rank}</td>
               <td className="td">
                 <div className="flex-items-center">
                   <img
@@ -51,40 +46,22 @@ const ExchangesTable: FC = () => {
                     alt={exchange.name}
                     width={20}
                     height={20}
-                    data-testid={`exchange-logo-data-${index + 1}`}
                   />
 
-                  <Link
-                    to={`/${exchange.id}`}
-                    className="name-link"
-                    data-testid={`exchange-name-data-${index + 1}`}
-                  >
+                  <Link to={`/${exchange.id}`} className="name-link">
                     {exchange.name}
                   </Link>
                 </div>
               </td>
-              <td
-                className="td text-center"
-                data-testid={`exchange-trust-score-data-${index + 1}`}
-              >
-                {exchange.trust_score}
-              </td>
-              <td
-                className="td  text-center"
-                data-testid={`exchange-volume-data-${index + 1}`}
-              >
+              <td className="td text-center">{exchange.trust_score}</td>
+              <td className="td  text-center">
                 {roundNumberAndCovertToLocale(
                   exchange.trade_volume_24h_btc_normalized,
                 )}{" "}
                 BTC
               </td>
-              <td
-                className="td"
-                data-testid={`exchange-country-data-${index + 1}`}
-              >
-                {exchange.country}
-              </td>
-              <td className="td" data-testid={`exchange-url-data-${index + 1}`}>
+              <td className="td">{exchange.country}</td>
+              <td className="td">
                 <a href={exchange.url} target="_blank">
                   {exchange.url}
                 </a>
