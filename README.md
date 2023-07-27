@@ -26,7 +26,7 @@ To set up the project for local development, follow these instructions:
 
 ## Project dependencies
 
-- Vite: Fast build tool and development server for web applications. This is my first time initializing a React app using Vite.
+- Vite: Fast build tool and development server for web applications. This is my first time initializing a React app using Vite. For new apps I would prefer to use a React framework like NextJS or Remix. I prefer NextJS.
 - React
 - Typescript
 - Vanilla CSS - I wouldn't use vanilla CSS for my projects but I just wanted to demonstrate my understanding of CSS. My preference would be to use Tailwind CSS but for established projects that may not be possible. My other choices would be a CSS preprocessor or CSS in JS.
