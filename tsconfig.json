@@ -28,8 +28,8 @@
       "mocks/*": ["./src/test/mocks/*"],
       "utils/*": ["./src/utils/*"]
     },
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "cypress", "@testing-library/cypress"]
   },
-  "include": ["src"],
+  "include": ["src", "**/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

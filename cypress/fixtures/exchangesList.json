@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "Exchange 1",
+    "image": "https://example.com/exchange1.png",
+    "trustScore": 10,
+    "volume24h": "1000000",
+    "country": "Country 1",
+    "url": "https://example.com/exchange1"
+  },
+  {
+    "id": "2",
+    "name": "Exchange 2",
+    "image": "https://example.com/exchange2.png",
+    "trustScore": 10,
+    "volume24h": "1500000",
+    "country": "Country 2",
+    "url": "https://example.com/exchange2"
+  },
+  {
+    "id": "3",
+    "name": "Exchange 3",
+    "image": "https://example.com/exchange3.png",
+    "trustScore": 10,
+    "volume24h": "800000",
+    "country": "Country 3",
+    "url": "https://example.com/exchange3"
+  },
+  {
+    "id": "4",
+    "name": "Exchange 4",
+    "image": "https://example.com/exchange4.png",
+    "trustScore": 10,
+    "volume24h": "1200000",
+    "country": "Country 4",
+    "url": "https://example.com/exchange4"
+  },
+  {
+    "id": "5",
+    "name": "Exchange 5",
+    "image": "https://example.com/exchange5.png",
+    "trustScore": 10,
+    "volume24h": "900000",
+    "country": "Country 5",
+    "url": "https://example.com/exchange5"
+  },
+  {
+    "id": "6",
+    "name": "Exchange 6",
+    "image": "https://example.com/exchange6.png",
+    "trustScore": 10,
+    "volume24h": "1100000",
+    "country": "Country 6",
+    "url": "https://example.com/exchange6"
+  },
+  {
+    "id": "7",
+    "name": "Exchange 7",
+    "image": "https://example.com/exchange7.png",
+    "trustScore": 10,
+    "volume24h": "700000",
+    "country": "Country 7",
+    "url": "https://example.com/exchange7"
+  },
+  {
+    "id": "8",
+    "name": "Exchange 8",
+    "image": "https://example.com/exchange8.png",
+    "trustScore": 10,
+    "volume24h": "1300000",
+    "country": "Country 8",
+    "url": "https://example.com/exchange8"
+  },
+  {
+    "id": "9",
+    "name": "Exchange 9",
+    "image": "https://example.com/exchange9.png",
+    "trustScore": 9,
+    "volume24h": "600000",
+    "country": "Country 9",
+    "url": "https://example.com/exchange9"
+  },
+  {
+    "id": "0",
+    "name": "Exchange 10",
+    "image": "https://example.com/exchange10.png",
+    "trustScore": 9,
+    "volume24h": "500000",
+    "country": "Country 10",
+    "url": "https://example.com/exchange10"
+  }
+]
