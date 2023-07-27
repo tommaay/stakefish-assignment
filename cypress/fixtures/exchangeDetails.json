@@ -1,0 +1,37 @@
+{
+  "name": "Exchange 1",
+  "year_established": 2015,
+  "country": "USA",
+  "description": "Exchange 1 is a cryptocurrency exchange that provides a cutting-edge platform. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "url": "https://www.exchange1.com",
+  "image": "https://www.example.com/exchange1_logo.png",
+  "facebook_url": "https://www.facebook.com/exchange1official",
+  "reddit_url": "https://www.reddit.com/r/exchange1/",
+  "telegram_url": "https://t.me/exchange1chat",
+  "twitter_handle": "exchange1_official",
+  "trust_score": 9,
+  "trade_volume_24h_btc": 51207.73659212345,
+  "tickers": [
+    {
+      "base": "BTC",
+      "target": "ETH",
+      "last": 34.876,
+      "volume": 100324587.92,
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.015,
+      "trade_url": "https://www.exchange1.com/trade/spot/BTC/ETH",
+      "coin_id": "bitcoin"
+    },
+    {
+      "base": "LTC",
+      "target": "XRP",
+      "last": 0.865,
+      "volume": 5789163.04,
+      "trust_score": "green",
+      "bid_ask_spread_percentage": 0.018,
+      "trade_url": "https://www.exchange1.com/trade/spot/LTC/XRP",
+      "token_info_url": null,
+      "coin_id": "litecoin"
+    }
+  ]
+}

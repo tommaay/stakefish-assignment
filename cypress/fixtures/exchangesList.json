@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "exchange-id-1",
     "name": "Exchange 1",
     "image": "https://example.com/exchange1.png",
     "trust_score_rank": 1,
@@ -10,7 +10,7 @@
     "url": "https://example.com/exchange1"
   },
   {
-    "id": "2",
+    "id": "exchange-id-2",
     "name": "Exchange 2",
     "image": "https://example.com/exchange2.png",
     "trust_score_rank": 2,
@@ -20,7 +20,7 @@
     "url": "https://example.com/exchange2"
   },
   {
-    "id": "3",
+    "id": "exchange-id-3",
     "name": "Exchange 3",
     "image": "https://example.com/exchange3.png",
     "trust_score_rank": 3,
@@ -30,7 +30,7 @@
     "url": "https://example.com/exchange3"
   },
   {
-    "id": "4",
+    "id": "exchange-id-4",
     "name": "Exchange 4",
     "image": "https://example.com/exchange4.png",
     "trust_score_rank": 4,
@@ -40,7 +40,7 @@
     "url": "https://example.com/exchange4"
   },
   {
-    "id": "5",
+    "id": "exchange-id-5",
     "name": "Exchange 5",
     "image": "https://example.com/exchange5.png",
     "trust_score_rank": 5,
@@ -50,7 +50,7 @@
     "url": "https://example.com/exchange5"
   },
   {
-    "id": "6",
+    "id": "exchange-id-6",
     "name": "Exchange 6",
     "image": "https://example.com/exchange6.png",
     "trust_score_rank": 6,
@@ -60,7 +60,7 @@
     "url": "https://example.com/exchange6"
   },
   {
-    "id": "7",
+    "id": "exchange-id-7",
     "name": "Exchange 7",
     "image": "https://example.com/exchange7.png",
     "trust_score_rank": 7,
@@ -70,7 +70,7 @@
     "url": "https://example.com/exchange7"
   },
   {
-    "id": "8",
+    "id": "exchange-id-8",
     "name": "Exchange 8",
     "image": "https://example.com/exchange8.png",
     "trust_score_rank": 8,
@@ -80,7 +80,7 @@
     "url": "https://example.com/exchange8"
   },
   {
-    "id": "9",
+    "id": "exchange-id-9",
     "name": "Exchange 9",
     "image": "https://example.com/exchange9.png",
     "trust_score_rank": 9,
@@ -90,7 +90,7 @@
     "url": "https://example.com/exchange9"
   },
   {
-    "id": "0",
+    "id": "exchange-id-0",
     "name": "Exchange 10",
     "image": "https://example.com/exchange10.png",
     "trust_score_rank": 10,
