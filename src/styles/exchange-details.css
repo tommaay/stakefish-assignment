@@ -16,6 +16,7 @@
 
 .description {
   margin-bottom: 1.5rem;
+  max-width: var(--lg);
 }
 
 .details-card-grid {
