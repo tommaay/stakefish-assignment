@@ -30,6 +30,7 @@ To set up the project for local development, follow these instructions:
 - React
 - Typescript
 - Vanilla CSS - I wouldn't use vanilla CSS for my projects but I just wanted to demonstrate my understanding of CSS. My preference would be to use Tailwind CSS but for established projects that may not be possible. My other choices would be a CSS preprocessor or CSS in JS.
+- React Router
 - Vitest - Test runner. This is my first time using Vitest I've only used Jest before. This was simple to pick up since most of the syntax is the same as Jest.
 - MSW (Mock Service Worker) - Mocks HTTP requests in development and makes it easy to simiulate API responses. This was my first time using this library as well.
 - Cypress - This is my first time using Cypress for e2e tests. This took more time to learn than Vitest as a lot of the syntax and setup was new to me. I am a big fan of Cypress now though. The syntax is clear and the setup was straight forward.
