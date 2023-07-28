@@ -26,13 +26,6 @@
   margin-bottom: 2rem;
 }
 
-@media (min-width: 48rem) {
-  .details-card-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
-}
-
 .social-links {
   display: flex;
   flex-direction: column;
@@ -48,6 +41,7 @@
 
 .social a {
   color: var(--white);
+  font-size: smaller;
 
   &:hover {
     color: var(--white);
@@ -60,6 +54,17 @@
   opacity: 0.5;
 }
 
-.details-value {
-  font-size: larger;
+@media (min-width: 48rem) {
+  .details-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .details-value {
+    font-size: larger;
+  }
+
+  .social a {
+    font-size: initial;
+  }
 }
