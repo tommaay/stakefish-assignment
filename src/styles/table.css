@@ -13,7 +13,7 @@
   }
 }
 
-.table {
+table {
   border-collapse: collapse;
   max-width: max-content;
   font-size: smaller;
@@ -22,11 +22,11 @@
   margin-right: auto;
 }
 
-.tr {
+tr {
   border-bottom: 0.1px solid #e6e6e674;
 }
 
-.th {
+th {
   font-size: larger;
   height: 3rem;
   padding: 0 1rem;
@@ -36,7 +36,7 @@
   white-space: nowrap;
 }
 
-.td {
+td {
   padding: 1rem;
   text-align: left;
   white-space: nowrap;
@@ -52,7 +52,7 @@
 }
 
 @media (min-width: 40rem) {
-  .table {
+  table {
     font-size: initial;
     line-height: 1.5rem;
   }

@@ -30,23 +30,23 @@ const ExchangesTable: FC = () => {
 
   return (
     <div className="table-container">
-      <table className="table">
+      <table>
         <thead>
-          <tr className="tr">
-            <th className="th">#</th>
-            <th className="th">Name</th>
-            <th className="th">Trust Score</th>
-            <th className="th">24h Volume</th>
-            <th className="th">Country</th>
-            <th className="th">URL</th>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Trust Score</th>
+            <th>24h Volume</th>
+            <th>Country</th>
+            <th>URL</th>
           </tr>
         </thead>
 
-        <tbody className="tbody">
+        <tbody>
           {exchanges.map((exchange) => (
-            <tr key={exchange.id} className="tr">
-              <td className="td">{exchange.trust_score_rank}</td>
-              <td className="td">
+            <tr key={exchange.id}>
+              <td>{exchange.trust_score_rank}</td>
+              <td>
                 <div className="flex-items-center">
                   <img
                     src={exchange.image}
@@ -60,15 +60,15 @@ const ExchangesTable: FC = () => {
                   </Link>
                 </div>
               </td>
-              <td className="td text-center">{exchange.trust_score}</td>
-              <td className="td  text-center">
+              <td className="text-center">{exchange.trust_score}</td>
+              <td className="text-center">
                 {roundNumberAndCovertToLocale(
                   exchange.trade_volume_24h_btc_normalized,
                 )}{" "}
                 BTC
               </td>
-              <td className="td">{exchange.country}</td>
-              <td className="td">
+              <td>{exchange.country}</td>
+              <td>
                 <a href={exchange.url} target="_blank">
                   {exchange.url}
                 </a>

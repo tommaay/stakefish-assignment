@@ -9,22 +9,22 @@ interface TickersTableProps {
 const TickersTable: FC<TickersTableProps> = ({ tickers }) => {
   return (
     <div className="table-container">
-      <table className="table">
+      <table>
         <thead>
           <tr>
-            <th className="th">Coin</th>
-            <th className="th">Pair</th>
-            <th className="th">Price</th>
-            <th className="th">Spread</th>
-            <th className="th">24h Volume</th>
+            <th>Coin</th>
+            <th>Pair</th>
+            <th>Price</th>
+            <th>Spread</th>
+            <th>24h Volume</th>
           </tr>
         </thead>
 
-        <tbody className="tbody">
+        <tbody>
           {tickers.map((ticker) => (
             <tr key={`${ticker.coin_id}-${ticker.base}-${ticker.target}`}>
-              <td className="td">{ticker.base}</td>
-              <td className="td">
+              <td>{ticker.base}</td>
+              <td>
                 <div className="flex-items-center">
                   <a
                     href={ticker.trade_url}
@@ -35,12 +35,10 @@ const TickersTable: FC<TickersTableProps> = ({ tickers }) => {
                   </a>
                 </div>
               </td>
-              <td className="td">{ticker.last}</td>
+              <td>{ticker.last}</td>
 
-              <td className="td">{ticker.bid_ask_spread_percentage}</td>
-              <td className="td">
-                {roundNumberAndCovertToLocale(ticker.volume)}{" "}
-              </td>
+              <td>{ticker.bid_ask_spread_percentage}</td>
+              <td>{roundNumberAndCovertToLocale(ticker.volume)} </td>
             </tr>
           ))}
         </tbody>
