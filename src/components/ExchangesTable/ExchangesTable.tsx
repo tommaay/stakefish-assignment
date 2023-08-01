@@ -3,23 +3,30 @@ import { Link } from "react-router-dom";
 import { Exchange } from "@/types";
 import { COIN_GECKO_URL } from "@/constants";
 import { roundNumberAndCovertToLocale } from "utils/numbers";
+import Loader from "../Loader";
 
 const ExchangesTable: FC = () => {
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchExchanges = async () => {
       const response = await fetch(`${COIN_GECKO_URL}/exchanges/?per_page=10`);
       const data = await response.json();
       setExchanges(data);
+      setIsLoading(false);
     };
+    setIsLoading(true);
 
     try {
       fetchExchanges();
     } catch (error) {
+      setIsLoading(false);
       console.error(error);
     }
   }, []);
+
+  if (isLoading) return <Loader />;
 
   return (
     <div className="table-container">

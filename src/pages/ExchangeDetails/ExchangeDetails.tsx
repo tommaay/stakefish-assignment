@@ -4,6 +4,7 @@ import Layout from "components/Layout";
 import DetailsCard from "components/DetailsCard";
 import SocialMediaCard from "components/SocialMediaCard";
 import TickersTable from "components/TickersTable";
+import Loader from "@/components/Loader";
 import { ExchangeDetails } from "@/types";
 import { COIN_GECKO_URL } from "@/constants";
 import { roundNumberAndCovertToLocale } from "utils/numbers";
@@ -28,7 +29,12 @@ const ExchangeDetails: FC = () => {
     }
   }, [exchangeId]);
 
-  if (!exchange) return null;
+  if (!exchange)
+    return (
+      <Layout>
+        <Loader />
+      </Layout>
+    );
 
   return (
     <Layout>
