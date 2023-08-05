@@ -24,7 +24,7 @@ To set up the project for local development, follow these instructions:
 
    > npm test
 
-4. To open Cypress UI and run E2E tests:
+4. To open Cypress UI and run E2E tests (The local server must be running):
 
    > npx cypress open
 
