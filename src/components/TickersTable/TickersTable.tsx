@@ -25,18 +25,15 @@ const TickersTable: FC<TickersTableProps> = ({ tickers }) => {
             <tr key={`${ticker.coin_id}-${ticker.base}-${ticker.target}`}>
               <td>{ticker.base}</td>
               <td>
-                <div className="flex-items-center">
-                  <a
-                    href={ticker.trade_url}
-                    className="name-link"
-                    target="_blank"
-                  >
-                    {ticker.base}/{ticker.target}
-                  </a>
-                </div>
+                <a
+                  href={ticker.trade_url}
+                  className="name-link"
+                  target="_blank"
+                >
+                  {ticker.base}/{ticker.target}
+                </a>
               </td>
               <td>{ticker.last}</td>
-
               <td>{ticker.bid_ask_spread_percentage}</td>
               <td>{roundNumberAndCovertToLocale(ticker.volume)} </td>
             </tr>
