@@ -88,7 +88,7 @@ describe("ExchangesTable", () => {
     });
   });
 
-  it("should sort the exchanges by volume", async () => {
+  it("should sort the exchanges by volume and then by name", async () => {
     renderExchangesTable();
 
     // Before sorting
@@ -104,11 +104,11 @@ describe("ExchangesTable", () => {
       );
     });
 
-    // After sorting
-    await waitFor(() => {
-      const tradeVolume = screen.getByText(/24h Volume/i);
-      fireEvent.click(tradeVolume);
+    // Sort by volume
+    const tradeVolumeHeading = screen.getByText(/24h Volume/i);
+    fireEvent.click(tradeVolumeHeading);
 
+    await waitFor(() => {
       expect(screen.getByTestId("exchange-name-row-1").textContent).toEqual(
         "Mock Exchange 2",
       );
@@ -117,6 +117,22 @@ describe("ExchangesTable", () => {
       );
       expect(screen.getByTestId("exchange-name-row-3").textContent).toEqual(
         "Mock Exchange 1",
+      );
+    });
+
+    // Sort by name
+    const nameHeading = screen.getByText(/Name/i);
+    fireEvent.click(nameHeading);
+
+    await waitFor(() => {
+      expect(screen.getByTestId("exchange-name-row-1").textContent).toEqual(
+        "Mock Exchange 1",
+      );
+      expect(screen.getByTestId("exchange-name-row-2").textContent).toEqual(
+        "Mock Exchange 2",
+      );
+      expect(screen.getByTestId("exchange-name-row-3").textContent).toEqual(
+        "Mock Exchange 3",
       );
     });
   });
