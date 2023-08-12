@@ -5,6 +5,19 @@ import { COIN_GECKO_URL } from "@/constants";
 import { roundNumberAndCovertToLocale } from "utils/numbers";
 import Loader from "../Loader";
 
+type SortType = string | number;
+
+function compareFn(a: SortType, b: SortType) {
+  if (typeof a === "string" && typeof b === "string") {
+    return a.localeCompare(b);
+  }
+
+  if (a < b) return -1;
+  if (a > b) return 1;
+
+  return 0;
+}
+
 const ExchangesTable: FC = () => {
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -26,6 +39,23 @@ const ExchangesTable: FC = () => {
     }
   }, []);
 
+  function sortBy(field: "name" | "volume") {
+    const sortedExchanges = [...exchanges];
+
+    if (field === "name") {
+      sortedExchanges.sort((a, b) => compareFn(a.name, b.name));
+    } else if (field === "volume") {
+      sortedExchanges.sort((a, b) =>
+        compareFn(
+          a.trade_volume_24h_btc_normalized,
+          b.trade_volume_24h_btc_normalized,
+        ),
+      );
+    }
+
+    setExchanges(sortedExchanges);
+  }
+
   if (isLoading) return <Loader />;
 
   return (
@@ -34,16 +64,16 @@ const ExchangesTable: FC = () => {
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
+            <th onClick={() => sortBy("name")}>Name</th>
             <th>Trust Score</th>
-            <th>24h Volume</th>
+            <th onClick={() => sortBy("volume")}>24h Volume</th>
             <th>Country</th>
             <th>URL</th>
           </tr>
         </thead>
 
         <tbody>
-          {exchanges.map((exchange) => (
+          {exchanges.map((exchange, index: number) => (
             <tr key={exchange.id}>
               <td>{exchange.trust_score_rank}</td>
               <td>
@@ -56,7 +86,9 @@ const ExchangesTable: FC = () => {
                   />
 
                   <Link to={`/${exchange.id}`} className="name-link">
-                    {exchange.name}
+                    <span data-testid={`exchange-name-row-${index + 1}`}>
+                      {exchange.name}
+                    </span>
                   </Link>
                 </div>
               </td>

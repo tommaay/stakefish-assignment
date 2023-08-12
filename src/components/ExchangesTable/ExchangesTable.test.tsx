@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import ExchangesTable from "./ExchangesTable";
 import { MOCK_EXCHANGES_LIST } from "mocks/data";
@@ -85,6 +85,39 @@ describe("ExchangesTable", () => {
       expect(country).toBeVisible();
       const url = screen.getByText(exchange3.url);
       expect(url).toBeVisible();
+    });
+  });
+
+  it("should sort the exchanges by volume", async () => {
+    renderExchangesTable();
+
+    // Before sorting
+    await waitFor(() => {
+      expect(screen.getByTestId("exchange-name-row-1").textContent).toEqual(
+        "Mock Exchange 1",
+      );
+      expect(screen.getByTestId("exchange-name-row-2").textContent).toEqual(
+        "Mock Exchange 2",
+      );
+      expect(screen.getByTestId("exchange-name-row-3").textContent).toEqual(
+        "Mock Exchange 3",
+      );
+    });
+
+    // After sorting
+    await waitFor(() => {
+      const tradeVolume = screen.getByText(/24h Volume/i);
+      fireEvent.click(tradeVolume);
+
+      expect(screen.getByTestId("exchange-name-row-1").textContent).toEqual(
+        "Mock Exchange 2",
+      );
+      expect(screen.getByTestId("exchange-name-row-2").textContent).toEqual(
+        "Mock Exchange 3",
+      );
+      expect(screen.getByTestId("exchange-name-row-3").textContent).toEqual(
+        "Mock Exchange 1",
+      );
     });
   });
 });
